@@ -8,4 +8,4 @@ Here you'll look some personal notes about JS course with DOM.
 Oscar Daniel Bachomo
 
 ### Main Author information
-{Link YouTube}
+[AlexCG Desig](https://www.youtube.com/watch?v=NuG59Zw8wf4&t=1490s)
