@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos en el DOM</title>
+</head>
+<body>
+    <main class="wrapper" data-id="wrapper">
+        <h1>¡Bienvenido ✌,
+            <span data-id="name">Usuario</span>
+            !
+        </h1>
+
+        <form action="">
+            <input type="text" placeholder="Ingresa tu nombre">
+            <input type="submit">
+        </form>
+    </main>
+
+    <!-- Podemos agrear eventos directamente en HTML 
+            onclick="alert('Diste click a este boton')"
+            O:
+            onclick="controladorEvento()"
+    -->
+    <section class="section">
+        <button data-id="button-show">Mostrar sección</button>
+        <button data-id="button-hide">Ocultar sección</button>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
