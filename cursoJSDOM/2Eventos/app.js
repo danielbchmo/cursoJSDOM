@@ -55,13 +55,57 @@ const buttonHide = document.querySelector('[data-id="button-hide"]');
  *
  * buttonShow.addEventListener('click', controladorEvento)
  */
-function showSection() {
+
+/**
+ * Una vez que addEvenListener detecta un evento y llama a la función, automaticamente
+ * se pasará un argumento que es un objeto llamado "event".
+ * 
+ * Este objeto tiene toda la información sobre el evento que acaba de ocurrir.
+ */
+function showSection(event) {
+  // console.log(event.type)
+  // console.log(event.target)
   wrapper.className = "show";
 }
 
-function hideSection() {
+function hideSection(e) {
+  //agregando evento que quita la funcion de una etiqueta
+  e.preventDefault()//Este para la etiqueta <a>
   wrapper.className = "hide";
 }
 
 buttonShow.addEventListener("click", showSection);
 buttonHide.addEventListener("click", hideSection);
+
+//Agregando un evento del tipo change
+input.addEventListener('change', function(event){
+  //Accediento al valor del evento target
+  //console.dir(event.target.value)
+  changeUser.textContent = event.target.value
+})
+
+//agregando evento del tipo click. e es event
+// wrapper.addEventListener('click', function(e){
+//   //console.log(e.target)
+//   e.target.style.backgroundColor = "hotpink"
+// })
+
+/**
+ * Ahora un ejemplo: Que pasa si al darle click al input submit, no queremos que el form
+ * haga su comportamiento natural que es enviarmo a un archivo exterior, sino que queremos
+ * que primero se valide con JS.
+ */
+
+//Primero, accedemos al padre del input
+const form = input.parentElement
+//Ahora, agregamos un evento del tiempo submit
+form.addEventListener('submit', function(e){
+  e.preventDefault()
+  console.log('Hola')
+})
+
+//O podemos usar esta forma tambien:
+// form.onsubmit = function(){
+//   console.log('Enviado')
+//   return false //El false es quien evita su comportamiento natural
+// }
