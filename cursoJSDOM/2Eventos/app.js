@@ -64,5 +64,4 @@ function hideSection() {
 }
 
 buttonShow.addEventListener("click", showSection);
-buttonShow.addEventListener("click", hideSection);
-
+buttonHide.addEventListener("click", hideSection);
