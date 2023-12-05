@@ -46,6 +46,10 @@ body {
     color: white;
     font-weight: bold;
     border-radius: 10px;
+    cursor: pointer;
+}
+.button:hover{
+    filter: brightness(80%);
 }
 
 .list-container {
